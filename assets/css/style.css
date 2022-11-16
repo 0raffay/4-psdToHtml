@@ -1,0 +1,258 @@
+/* resets */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::after, *::before{
+    box-sizing: border-box;
+}
+
+
+:root{
+    --drk-clr: #181818;
+    --prpl-clr-primary: #aa84f9;
+    --prpl-clr-secondary: #a460f9;
+    --krub: 'Krub', sans-serif;
+}
+
+body{
+    font-family: 'Krub', sans-serif;
+    color: #fff;
+    background-color: var(--drk-clr);
+    width: 100vw;
+    height: 100vh;
+}
+
+a,
+ul
+{
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+h1{
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+h2,h3,h4,h5,h6{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* utility */
+
+.container{
+    max-width: 1420px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.justify-content-space{
+    justify-content: space-between;
+}
+
+.btn{
+    font-size: 15px;
+    padding: 6px 30px;
+    background-color: var(--prpl-clr-primary);
+    font-weight: 700;
+    border-radius: 3px;
+}
+
+.btn-primary{
+    background-color: #fff;
+    color: var(--drk-clr);
+    font-weight: 500;
+    transition: all .3s ease-in-out;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+/* Styling */
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    font-weight: 600;
+    padding: 30px 80px;
+
+}
+
+.nav-links{
+    gap: 100px;
+}
+nav ul li a{
+    position: relative;
+}
+
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    transition: all .2s ease-in;
+}
+
+nav ul > li:hover a::after{
+    width: 100%;
+}
+
+nav ul li a.active::after{
+    width: 100%;
+}
+
+.btn-primary:hover{
+    opacity: .8;
+}
+
+.banner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100vw;
+    font-family: var(--krub);
+}
+
+
+.banner-txt-1{
+    grid-column: 2/5;
+    place-self: center;
+}
+
+.banner-img{
+    grid-column: 5/8;
+    scale: .98;
+    position: relative;
+    top: 40px;
+}
+
+.banner-txt-2{
+    place-self: center;
+    grid-column: 9/12;
+    column-width: 100%;
+    padding: 100px 20px;
+}
+
+#ui{
+    font-size: 100px;
+    font-weight: bold;
+    font-family: var(--krub);
+    position: absolute;
+    top: 20%;
+    left: 2%;
+}   
+
+#ui::after{
+    content: "";
+    background-color: var(--prpl-clr-secondary);
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    z-index: 1;
+    display: inline-block;
+}
+
+.banner-txt-1 h3{
+    position: absolute;
+    top: 55%;
+    left: -4%;
+    font-size: 35px;
+    font-family: var(--krub);
+    font-weight: 300;
+    transform: rotate(-90deg);
+    letter-spacing: 3px;
+}
+
+.banner-txt-1 h3::after{
+    content: "'s";
+    font-weight: 700;
+    text-transform: lowercase;
+}
+
+.banner-txt-1 ul{
+    list-style-type: square;
+    position: relative;
+    top: 40px;
+    font-size: 12px;
+    font-family: var(--krub);
+    font-weight: 700;
+}
+
+
+#edition-box{
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    padding: 25px 70px 25px 35px;
+    border: 1px solid #fff;
+    border-right: none;
+    border-width: 150%;
+}
+
+#edition-box h2{
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+#edition-box h2::after{
+    content: "2022";
+    display: block;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 4px;
+}
+
+.main-para h3{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.main-para p{
+    line-height: 1.6;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+.banner-btn-main{
+    font-size: 12px;
+    padding: 8px 15px;
+    background-color: var(--prpl-clr-secondary);
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    transition: all .3s ease-in-out;
+    margin-right: 10px;
+}
+
+.banner-btn-main:hover{
+    opacity: .8;
+}
