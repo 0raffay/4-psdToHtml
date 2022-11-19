@@ -21,8 +21,7 @@ body{
     font-family: 'Krub', sans-serif;
     color: #fff;
     background-color: var(--drk-clr);
-    width: 100vw;
-    height: 100vh;
+
 }
 
 a,
@@ -53,7 +52,7 @@ img{
 /* utility */
 
 .container{
-    max-width: 1420px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -98,7 +97,7 @@ header{
     z-index: 9;
     font-weight: 600;
     padding: 30px 80px;
-
+    
 }
 
 .nav-links{
@@ -131,13 +130,11 @@ nav ul li a.active::after{
     opacity: .8;
 }
 
-.banner{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 100vw;
-    font-family: var(--krub);
+#home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 
@@ -148,7 +145,7 @@ nav ul li a.active::after{
 
 .banner-img{
     grid-column: 5/8;
-    scale: .98;
+    scale: 1.2;
     position: relative;
     top: 40px;
 }
@@ -166,7 +163,7 @@ nav ul li a.active::after{
     font-family: var(--krub);
     position: absolute;
     top: 20%;
-    left: 2%;
+    left: 5%;
 }   
 
 #ui::after{
@@ -181,8 +178,8 @@ nav ul li a.active::after{
 
 .banner-txt-1 h3{
     position: absolute;
-    top: 55%;
-    left: -4%;
+    top: 51%;
+    left: -.5%;
     font-size: 35px;
     font-family: var(--krub);
     font-weight: 300;
@@ -200,6 +197,7 @@ nav ul li a.active::after{
     list-style-type: square;
     position: relative;
     top: 40px;
+    left: -16px;
     font-size: 12px;
     font-family: var(--krub);
     font-weight: 700;
@@ -209,12 +207,11 @@ nav ul li a.active::after{
 #edition-box{
     text-align: center;
     position: absolute;
-    top: 20%;
+    top: 18%;
     right: 0;
-    padding: 25px 70px 25px 35px;
     border: 1px solid #fff;
+    padding: 25px 50px 25px 35px;
     border-right: none;
-    border-width: 150%;
 }
 
 #edition-box h2{
@@ -232,7 +229,7 @@ nav ul li a.active::after{
 }
 
 .main-para h3{
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     margin-bottom: 30px;
 }
@@ -255,4 +252,50 @@ nav ul li a.active::after{
 
 .banner-btn-main:hover{
     opacity: .8;
+}
+
+
+
+#achive-section{
+    padding: 60px 0;
+    box-shadow: 0 10px 10px 5px #000;
+    font-family: 'Oswald', sans-serif;
+    background-color: #181818;
+}
+
+.achive-box{
+    gap: 20px;
+}
+.achive-box h2{
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.achive-box h2:before{
+    content: "+";
+    display: inline-block;
+    margin-right: 12px;
+    color: var(--prpl-clr-secondary);
+    font-weight: 800;
+}
+
+.achive-box h3{
+    font-family: var(--krub);
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: .95rem;
+}
+.achive-box h3::after{
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.achive-box-1 h3::after{
+    content: "Students";
+}
+.achive-box-2 h3::after{
+    content: "Courses";
+}
+.achive-box-3 h3::after{
+    content: "Received";
 }
