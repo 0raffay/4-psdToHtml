@@ -15,6 +15,7 @@
     --prpl-clr-primary: #aa84f9;
     --prpl-clr-secondary: #a460f9;
     --krub: 'Krub', sans-serif;
+    --oswald: 'Oswald', sans-serif; 
 }
 
 body{
@@ -258,7 +259,7 @@ nav ul li a.active::after{
 
 #achive-section{
     padding: 60px 0;
-    box-shadow: 0 10px 10px 5px #000;
+    box-shadow: 0 5px 5px #121212;
     font-family: 'Oswald', sans-serif;
     background-color: #181818;
 }
@@ -298,4 +299,14 @@ nav ul li a.active::after{
 }
 .achive-box-3 h3::after{
     content: "Received";
+}
+
+
+#challenges{
+    height: 100vh;
+    background-color: transparent;
+    background-image: url(challengesSectionBackgroundImg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
